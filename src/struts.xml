@@ -6,7 +6,7 @@
 
 <struts>
     <constant name="struts.devMode" value="true"/>
-    <package name="com. diworksdev.webproj2.action" extends="struts-default">
+    <package name="com.diworksdev.webproj2.action" extends="struts-default">
         <action name="HelloStrutsAction" class="com.diworksdev.webproj2.action.HelloStrutsAction" method="execute">
             <result name="success">hello.jsp</result>
             <result name="error">helloStrutsError.jsp</result>

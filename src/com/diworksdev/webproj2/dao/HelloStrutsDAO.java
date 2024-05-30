@@ -13,6 +13,7 @@ public class HelloStrutsDAO {
 		boolean ret = false;
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
+
 		String sql = "select * from users";
 
 		try {
@@ -23,7 +24,7 @@ public class HelloStrutsDAO {
 				ret = true;
 			}
 
-		} catch (java.sql.SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
