@@ -29,6 +29,7 @@ public class HelloStrutsDAO {
 
 		try {
 			con.close();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
