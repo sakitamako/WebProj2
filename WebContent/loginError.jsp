@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <met charset="UTF-8">
+        <meta charset="UTF-8">
         <title>LoginError</title>
     </head>
     <body>
