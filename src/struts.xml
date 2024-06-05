@@ -22,6 +22,7 @@
             <!-- execute()メソッドから返ってきた値によって、次に遷移するJSPを振り分け -->
             <!-- 6, ⑤のメソッドからSUCCESSが返された場合、ここで記述したJSPファイルに遷移 -->
             <result name="success">hello.jsp</result>
+            <result name="error">helloStrutsError.jsp</result>
         </action>
 
         <action name="WelcomeAction" class="com.diworksdev.webproj2.action.WelcomeAction" method="execute">
