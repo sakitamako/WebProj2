@@ -11,7 +11,7 @@
     </head>
     <body>
     <!-- ブラウザ上の問い合わせボタンを押した先の入力項目が表示される -->
-        <!-- struts.xmlfileにアクションし、入力した処理結果を登録ボタンを押した先のinquiry.jspで表示する -->
+        <!-- struts.xmlfileにアクションし、入力した処理結果を登録ボタンを押した先のinquiryComplete.jspで表示する -->
         <s:form method="post" action="InquiryCompleteAction">
             名前:<br>
             <input type="text" name="name"/>
