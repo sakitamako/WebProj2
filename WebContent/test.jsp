@@ -10,6 +10,7 @@
         <title>TEST</title>
     </head>
     <body>
+    <!-- testActionファイルの中身をstrutsファイルでシンプルにして各画面にシンプルに表示する、strutsファイルの処理結果が表示される -->
         <br>
         <h1>以下の新規ユーザーが登録されました。</h1>
         <s:property value="username"/>
