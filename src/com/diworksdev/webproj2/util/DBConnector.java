@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+//データベースを使う必要がある場合、DB接続 (コネクション)の設定を行うファイル
+//DBConnectorでは、接続するDBの「場所」「名前」や接続する「ユーザ名」「パスワード」の設定を行う
 public class DBConnector {
+
 	//JDBCドライバー名
 	private static String driverName = "com.mysql.jdbc.Driver";
 

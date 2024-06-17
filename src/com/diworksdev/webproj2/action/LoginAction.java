@@ -3,6 +3,9 @@ package com.diworksdev.webproj2.action;
 import com.diworksdev.webproj2.dao.LoginDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
+//Actionクラスでは、画面から送られてきたリクエストを取得する
+//内部処理に応じてDAOやDTOクラスを呼び出し、最終的に次のJSPへ値を返すファイル
+
 //struts2が持つActionSupportというクラスを継承
 //（Actionクラスは基本的にこのクラスを継承）
 //LoginAciton（子クラス） extends（継承） ActionSupport（親クラス）
@@ -42,33 +45,32 @@ public class LoginAction extends ActionSupport {
 		}
 
 		//retに入った値を呼び出し元であるActionクラスに渡す
-		//戻り値
 		return ret;
 
 	}
 
-	//getterは値を引っ張ってくるメソッド
-	//メソッド＝オブジェクトの操作を定義したもの
+	//フィールド変数に対応したgetterとsetterを定義
+	//Actionクラスから呼び出され、usernameフィールドの値をActionに渡す
 	public String getUsername() {
 		return username;
 
 	}
 
-	//setterは値を代入するメソッド
-	//メソッド＝オブジェクトの操作を定義したもの
+	//フィールド変数に対応したgetterとsetterを定義
+	//DAOクラスから呼び出され、引数として受け取ったテーブルの値を自身のDTO usernameフィールドに格納
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
-	//getterは値を引っ張ってくるメソッド
-	//メソッド＝オブジェクトの操作を定義したもの
+	//フィールド変数に対応したgetterとsetterを定義
+	//Actionクラスから呼び出され、passwordフィールドの値をActionに渡す
 	public String getPassword() {
 		return password;
 
 	}
 
-	//setterは値を代入するメソッド
-	//メソッド＝オブジェクトの操作を定義したもの
+	//フィールド変数に対応したgetterとsetterを定義
+	//DAOクラスから呼び出され、引数として受け取ったテーブルの値を自身のDTO passwrdフィールドに格納
 	public void setPassword(String password) {
 		this.password = password;
 

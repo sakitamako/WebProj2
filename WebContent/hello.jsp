@@ -10,6 +10,7 @@
         <title>HelloStruts</title>
     </head>
     <body>
+    <!-- ブラウザ上のHelloStrutsボタンを押した先に表示される -->
         <h1>HelloStruts2!</h1>
         <br>
         <h3>MySQLと接続できます。</h3>

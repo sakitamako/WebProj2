@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import com.diworksdev.webproj2.util.DBConnector;
 
+//DAOクラスでは、Actionから送られてきた情報を使ってDBへ問い合わせを行うファイル
+//問い合わせて取得した値をDTOクラスに格納するファイル
 public class LoginDAO {
 
 	public String username;
@@ -58,7 +60,7 @@ public class LoginDAO {
 				//select文でDBから取得した情報をString型に変換してDTOクラスに格納
 				//LoginDTOクラスのsetName、setPassword（setter）を利用
 				this.username = rs.getString("user_name");
-				this.password=rs.getString("password");
+				this.password = rs.getString("password");
 
 				ret = true;
 			}
@@ -87,8 +89,7 @@ public class LoginDAO {
 
 		}
 
-		//戻り値
-		//処理結果を返す
+		//retに入った値を呼び出し元であるActionクラスに渡す
 		return ret;
 
 	}

@@ -6,6 +6,8 @@ import java.sql.SQLException;
 
 import com. diworksdev.webproj2.util.DBConnector;
 
+//DAOクラスでは、Actionから送られてきた情報を使ってDBへ問い合わせを行うファイル
+//問い合わせて取得した値をDTOクラスに格納するファイル
 public class InquiryCompleteDAO {
 
 	//①クラス、メソッドの定義
@@ -54,6 +56,7 @@ public class InquiryCompleteDAO {
 		//例外が発生しcatchされてもされなくても、共通してやってほしい処理や、やらなければいけない処理を書くところ。
 		} catch (SQLException e) {
 			e.printStackTrace();
+
 		}
 
 		//try.catchはjavaの例外処理のための構文
@@ -69,10 +72,10 @@ public class InquiryCompleteDAO {
 		//例外が発生しcatchされてもされなくても、共通してやってほしい処理や、やらなければいけない処理を書くところ。
 		} catch (SQLException e) {
 			e.printStackTrace();
+
 		}
 
-		//戻り値
-		//処理結果を返す
+		//retに入った値を呼び出し元であるActionクラスに渡す
 		return ret;
 
 	}

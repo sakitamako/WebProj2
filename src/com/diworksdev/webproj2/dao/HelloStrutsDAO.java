@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import com.diworksdev.webproj2.util.DBConnector;
 
+//DAOクラスでは、Actionから送られてきた情報を使ってDBへ問い合わせを行うファイル
+//問い合わせて取得した値をDTOクラスに格納するファイル
 public class HelloStrutsDAO {
 
 	//クラス、メソッドの定義
@@ -52,10 +54,15 @@ public class HelloStrutsDAO {
 		//例外がスローされる原因となったエラーまたは動作の説明を返す
 		} catch (SQLException e) {
 			e.printStackTrace();
+
 		}
 
 		//try.catchはjavaの例外処理のための構文
 		try {
+
+			//⑨con.close()で接続を切る
+			//データベースとの接続をクローズ
+			//これをしないとデータベースを接続したまま作業が実行されてしまってメモリに負荷がかかる
 			con.close();
 
 		//処理中にSQL関連のエラーが発生した際に実行する処理
@@ -63,6 +70,7 @@ public class HelloStrutsDAO {
 		//例外がスローされる原因となったエラーまたは動作の説明を返す
 		} catch (SQLException e) {
 			e.printStackTrace();
+
 		}
 
 		//retに入った値を呼び出し元であるActionクラスに渡す
